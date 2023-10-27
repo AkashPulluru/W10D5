@@ -4,23 +4,15 @@ import ReactDOM from 'react-dom';
 import {Route, Switch} from "react-router-dom";
 
 
-function GalleryView() {
+function GalleryView(props) {
 
     const {galleryId} = useParams();
+    
     console.log(galleryId)
 
     return (
-      <h1>Hello from GalleryView</h1>
+      <h1>Hello from {props.galleries.name}</h1>
     );
   }
-
-ReactDOM.render(
-    <Switch>
-        <Route>
-            <
-        </Route>
-    </Switch>
-
-)
 
 export default GalleryView;

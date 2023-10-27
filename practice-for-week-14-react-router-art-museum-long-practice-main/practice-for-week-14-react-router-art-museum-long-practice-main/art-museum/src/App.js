@@ -8,9 +8,11 @@ function App() {
   return (
     
     <div className="page-wrapper">
+      <GalleryNavigation galleries={harvardArt.records} />
       <Switch>  
-        <Route path="/galleries/:galleryId" component={GalleryView}/>
-        <GalleryNavigation galleries={harvardArt.records} />
+        <Route path="/galleries/:galleryId">
+          <GalleryView galleries={harvardArt.records}/>
+        </Route>
       </Switch>
     </div>
     
